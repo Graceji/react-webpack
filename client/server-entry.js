@@ -1,4 +1,4 @@
 import React from 'react';
-import App from '../client/views/App';
+import App from './containers/App';
 
 export default <App />

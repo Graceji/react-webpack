@@ -15,7 +15,7 @@ const ReactSSR = require('react-dom/server');
 const serverEntry = require('../client/server-entry').default;
 
 app.use(koaStatic(path.join(__dirname, '../dist')));
-app.use(views(path.resolve(__dirname, '../client'), {
+app.use(views(path.resolve(__dirname, '../views'), {
   map: {
     html: 'ejs',
   }

@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackMerge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base');
 // __dirname: /Users/jina194/Desktop/react-webpack/build
@@ -18,10 +18,10 @@ const config = webpackMerge(baseConfig, {
     publicPath: '/', // 静态资源文件引用时的路径
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   // template: path.join(__dirname, '../client/index.html'),
-    //   template: path.join(__dirname, '../client/index1.html'),
-    // }),
+    new HtmlWebpackPlugin({
+      // template: path.join(__dirname, '../client/index.html'),
+      template: path.join(__dirname, '../client/index1.html'),
+    }),
   ],
 });
 
