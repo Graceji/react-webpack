@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackMerge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base');
 // __dirname: /Users/jina194/Desktop/react-webpack/build
@@ -13,14 +13,15 @@ const config = webpackMerge(baseConfig, {
     app: path.join(__dirname, '../client/app.js'),
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     path: path.join(__dirname, '../dist'),
-    publicPath: '/public/', // 静态资源文件引用时的路径
+    publicPath: '/', // 静态资源文件引用时的路径
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, '../client/index.html'),
-    }),
+    // new HtmlWebpackPlugin({
+    //   // template: path.join(__dirname, '../client/index.html'),
+    //   template: path.join(__dirname, '../client/index1.html'),
+    // }),
   ],
 });
 
@@ -43,7 +44,7 @@ if (isDev) {
     publicPath: '/public/',
     // historyApiFallback: true,
     historyApiFallback: {
-      index: '/public/index.html',
+      index: '/public/index1.html',
     },
   };
   // 添加NamedModulesPlugin，以便更容易查看要修补(patch)的依赖)

@@ -13,6 +13,7 @@ module.exports = {
 	extends: 'airbnb',
 	rules: {
     'indent': ['error', 2],
-    'space-before-function-paren': ['error', 'always']
+    'space-before-function-paren': ['error', 'always'],
+    'class-methods-use-this': 'off',
 	}
 }

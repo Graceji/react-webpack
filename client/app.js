@@ -15,7 +15,7 @@ import App from './views/App';
 
 // render(App);
 
-ReactDOM.render(<App />, document.getElementById('root')); // eslint-disable-line
+ReactDOM.hydrate(<App />, document.getElementById('root')); // eslint-disable-line
 
 // if (module.hot) {
 //   module.hot.accept('./App.jsx', () => {

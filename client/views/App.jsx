@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { hot } from 'react-hot-loader'; // eslint-disable-line
+// import { hot } from 'react-hot-loader'; // eslint-disable-line
 
-class App extends Component {
+export default class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -9,13 +9,15 @@ class App extends Component {
     };
   }
 
+  handleClick () {
+    console.log('点击'); // eslint-disable-line
+  }
+
   render () {
     return (
-      <div>
-        App131
-      </div>
+      <button onClick={this.handleClick}>
+        点我
+      </button>
     );
   }
 }
-
-export default hot(module)(App);

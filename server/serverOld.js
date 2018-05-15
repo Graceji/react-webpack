@@ -1,3 +1,4 @@
+// 视频中的版本
 const Koa = require('koa');
 const koaStatic = require('koa-static');
 const router = require('koa-router')();
