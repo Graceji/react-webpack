@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import App from './views/App';
 // import { AppContainer } from 'react-hot-loader';
 
 // const root = document.getElementById('root');
@@ -15,7 +15,7 @@ import App from './App.jsx';
 
 // render(App);
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root')); // eslint-disable-line
 
 // if (module.hot) {
 //   module.hot.accept('./App.jsx', () => {

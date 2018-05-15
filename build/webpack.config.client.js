@@ -1,11 +1,13 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpackMerge = require('webpack-merge');
+const baseConfig = require('./webpack.config.base');
 // __dirname: /Users/jina194/Desktop/react-webpack/build
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const config = {
+const config = webpackMerge(baseConfig, {
   mode: 'development',
   entry: {
     app: path.join(__dirname, '../client/app.js'),
@@ -15,27 +17,12 @@ const config = {
     path: path.join(__dirname, '../dist'),
     publicPath: '/public/', // 静态资源文件引用时的路径
   },
-  module: {
-    rules: [
-      {
-        test: /.jsx$/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /.js$/,
-        loader: 'babel-loader',
-        exclude: [
-          path.join(__dirname, '../node_modules'),
-        ],
-      },
-    ],
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../client/index.html'),
     }),
   ],
-};
+});
 
 if (isDev) {
   // Code is automatically patched, you can safely remove react-hot-loader/patch from your Webpack config.

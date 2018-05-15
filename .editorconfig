@@ -2,8 +2,8 @@ root = true # 表示是最顶层的配置文件，发现设为true时，才会�
 
 [*] # 所有文件都应用如下规则
 charset = utf-8 # 设置编码
-indent_style = tab # 设置缩进风格
-tab_width = 2
+indent_style = space # 设置缩进风格
+indent_size = 2
 end_of_line = lf # 设置换行符
 insert_final_newline = true # 设为true表示使文件以一个空白行结尾
 trim_trailing_whitespace = true # 设为true表示会去除换行行首的任意空白字符
