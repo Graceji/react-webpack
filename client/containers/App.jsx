@@ -16,7 +16,7 @@ class App extends Component {
   render () {
     return (
       <button onClick={this.handleClick}>
-        点我13
+        点我1
       </button>
     );
   }

@@ -11,7 +11,9 @@
     "dev:client": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.client.js",
     "dev:server": "cross-env NODE_ENV=development node server/server.js",
     "server1": "rimraf dist && webpack --config build/webpack.config.server1.js && nodemon server/server1.js",
-    "server2": "rimraf dist && webpack --config build/webpack.config.server2.js && nodemon server/server2.js"
+    "server2": "rimraf dist && webpack --config build/webpack.config.server2.js && nodemon server/server2.js",
+    "server3:client": "webpack-dev-server --config build/webpack.config.server3.js",
+    "server3:server": "nodemon server/server3.js"
   },
   "repository": {
     "type": "git",
