@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './containers/App';
 // import { AppContainer } from 'react-hot-loader';
 
@@ -14,8 +15,14 @@ import App from './containers/App';
 // }
 
 // render(App);
+const renderMethod = !module.hot ? ReactDOM.hydrate : ReactDOM.render;
 
-ReactDOM.hydrate(<App />, document.getElementById('root')); // eslint-disable-line
+renderMethod(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('root')
+); // eslint-disable-line
 
 // if (module.hot) {
 //   module.hot.accept('./App.jsx', () => {

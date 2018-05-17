@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { hot } from 'react-hot-loader'; // eslint-disable-line
+import Routes from '../router';
 
 class App extends Component {
   constructor (props) {
@@ -15,9 +17,14 @@ class App extends Component {
 
   render () {
     return (
-      <button onClick={this.handleClick}>
-        点我1
-      </button>
+      <React.Fragment>
+        <div>
+          <Link to="/">首页</Link>
+          <br />
+          <Link to="/detail">详情页</Link>
+        </div>
+        <Routes />
+      </React.Fragment>
     );
   }
 }
