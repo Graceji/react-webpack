@@ -10,7 +10,8 @@
     "build": "rimraf dist && npm run build:client && npm run build:server",
     "dev:client": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.client.js",
     "dev:server": "cross-env NODE_ENV=development node server/server.js",
-    "server1": "rimraf dist && webpack --config build/webpack.config.server1.js && nodemon server/server1.js"
+    "server1": "rimraf dist && webpack --config build/webpack.config.server1.js && nodemon server/server1.js",
+    "server2": "rimraf dist && webpack --config build/webpack.config.server2.js && nodemon server/server2.js"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "eslint-plugin-react": "^7.7.0",
     "html-webpack-plugin": "^3.2.0",
     "http-proxy-middleware": "^0.18.0",
+    "koa-webpack": "^4.0.0",
     "memory-fs": "^0.4.1",
     "node-jsx": "^0.13.3",
     "nodemon": "^1.17.4",
