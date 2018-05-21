@@ -23,6 +23,8 @@ module.exports = {
       'exports': 'never',
       'functions': 'ignore'
     }],
-    'jsx-a11y/anchor-is-valid': [0]
+    'jsx-a11y/anchor-is-valid': [0],
+    'import/no-named-as-default': [0],
+    'import/no-named-as-default-member': [0]
 	}
 }

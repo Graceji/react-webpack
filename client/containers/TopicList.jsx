@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { observer, inject } from 'mobx-react';
 
+@inject('appState') @observer
 export default class TopicList extends Component {
   constructor (props) {
     super(props);
@@ -8,7 +10,10 @@ export default class TopicList extends Component {
 
   render () {
     return (
-      <div>topicList</div>
+      <div>
+        topicList
+        <div>{this.props.appState.msg}</div>
+      </div>
     );
   }
 }

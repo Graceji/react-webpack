@@ -6,25 +6,27 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   loader: 'eslint-loader',
+      //   enforce: 'pre',
+      //   exclude: [
+      //     path.resolve(__dirname, '../node_modules')
+      //   ],
+      // },
       {
-        test: /\.(js|jsx)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        exclude: [
-          path.resolve(__dirname, '../node_modules')
-        ],
-      },
-      {
-        test: /.jsx$/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
+        include: path.join(__dirname, '../client')
       },
-      {
-        test: /.js$/,
-        loader: 'babel-loader',
-        exclude: [
-          path.join(__dirname, '../node_modules'),
-        ],
-      },
+      // {
+      //   test: /.js$/,
+      //   loader: 'babel-loader',
+      //   include: path.join(__dirname, '../client'),
+      //   exclude: [
+      //     path.join(__dirname, '../node_modules'),
+      //   ],
+      // },
     ],
   },
 };
